@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputString = prompt("Nhập vào một chuỗi bất kỳ: ");
+
+let sortCharacters = function (str) {
+    let letters = "";
+    let digits = "";
+    let specialChars = "";
+
+    for (let char of str) {
+        if (/[a-zA-Z]/.test(char)) {
+            letters += char;
+        } else if (/[0-9]/.test(char)) {
+            digits += char;
+        } else {
+            specialChars += char;
+        }
+    }
+
+    return letters + digits + specialChars;
+};
+
+let resultArray = sortCharacters(inputString);
+
+console.log("Chuỗi được sắp xếp:", resultArray);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Nhập vào một số nguyên dương n: ");
+n = parseInt(n);
+
+if (isNaN(n) || n <= 0) {
+    console.log("Vui lòng nhập một số nguyên dương.");
+} else {
+    let sum = 0;
+
+    for (let i = 1; i <= n; i += 2) {
+        console.log(i);
+        sum += i;
+    }
+
+    if (sum % 2 !== 0) {
+        console.log("Tổng các số lẻ là một số lẻ:", sum);
+    } else {
+        console.log("In thêm số lẻ cuối cùng để tổng là số lẻ:", n % 2 === 0 ? n - 1 : n);
+    }
+}
+
+    </script>
+</body>
+</html>

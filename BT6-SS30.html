@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let arr = [4, 6, 3, 7];
+
+let triangleCount = 0;
+
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    for (let k = j + 1; k < arr.length; k++) {
+    
+      if (arr[i] + arr[j] > arr[k] && arr[i] + arr[k] > arr[j] && arr[j] + arr[k] > arr[i]) {
+        triangleCount++;
+      }
+    }
+  }
+}
+
+console.log("Số lượng tam giác có thể tạo ra từ mảng là: " + triangleCount);
+
+    </script>
+</body>
+</html>
